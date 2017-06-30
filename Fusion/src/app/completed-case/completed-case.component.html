@@ -2,3 +2,23 @@
   Completed Cases over the past 7 days
 </h5>
 <hr>
+<div class="card-deck">
+  <div class="card" *ngFor="let service of services">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card-block">
+          <h4 class="card-title">
+            {{ service.type }}
+          </h4>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-block">
+          <h4 class="card-title">
+            {{ service.days }}
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

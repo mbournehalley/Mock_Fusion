@@ -2,3 +2,107 @@
   Current Cases
 </h5>
 <hr>
+<div class="container-fluid cases">
+  <h6>Filter Options</h6>
+  <hr>
+  <div class="row cases">
+    <div class="col-lg-1">    
+      <span><strong>Services:</strong></span>
+    </div>
+    <div class="col-lg-2">    
+      <div class="d-inline bg-success">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+      <span>&nbsp;Benefits Verification</span>
+    </div>
+    <div class="col-lg-2">
+      <div class="d-inline bg-warning">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+      <span>&nbsp;Prior Authorization</span>
+    </div>
+    <div class="col-lg-2">
+      <div class="d-inline bg-primary">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+      <span>&nbsp;CoPay</span>
+    </div>
+    <div class="col-lg-1">
+      <div class="d-inline bg-info">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+      <span>&nbsp;PAP</span>
+    </div>
+    <div class="col-lg-3">
+      <div class="d-inline bg-inverse">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+      <span>&nbsp;Prescription Referral</span>
+    </div>  
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-lg-1 ">
+      <strong>Status Key</strong>
+    </div>
+    <div class="col-lg-2">
+      <i class="fa fa-circle" aria-hidden="true"></i>
+      Completed
+    </div>
+    <div class="col-lg-2">
+      <i class="fa fa-circle" aria-hidden="true"></i>
+      In-Progress
+    </div>
+    <div class="col-lg-2">
+      <i class="fa fa-circle" aria-hidden="true"></i>
+      Action-needed
+    </div>
+  </div>
+  <div class="row cases-detail justify-content-center" 
+       *ngFor="let patient of pagedItems">
+    <div class="col-lg-1 first">
+      <i class="fa fa-circle" aria-hidden="true"></i>
+    </div>
+    <div id="name" class="col-lg-2 middle">
+      {{ patient.name }}
+    </div>
+    <div class="col-lg-2 middle bolder">
+      Patient ID: {{ patient.patientID }}
+    </div>
+    <div class="col-lg-2 middle bolder">
+      Date of Birth: {{ patient.dob }}
+    </div>
+    <div class="col-lg-2 middle bolder">
+      Service ID: {{ patient.serviceID }}
+    </div>
+    <div class="col-lg-2 last text-center">
+      <span [ngClass]="getDisplayText(patient.service)">
+        {{ patient.service }}
+      </span>
+    </div>
+  </div>
+</div>
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item" 
+        [ngClass]="{disabled:pager.currentPage === 1}">
+      <a class="page-link" 
+         (click)="setPage(pager.currentPage - 1)">
+        Previous
+      </a>
+    </li>
+    <li class="page-item" 
+        *ngFor="let page of pager.pages" 
+        [ngClass]="{active:pager.currentPage === page}">
+      <a class="page-link" 
+        (click)="setPage(page)">
+        {{ page }}
+      </a>
+    </li>
+    <li class="page-item" 
+        [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+      <a class="page-link" (click)="setPage(pager.currentPage + 1)">
+        Next
+      </a>
+    </li>
+  </ul>
+</nav>

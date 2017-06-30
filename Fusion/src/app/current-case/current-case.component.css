@@ -1,0 +1,47 @@
+.col-lg-2.last.text-center > span {
+  color: white;
+  font-weight: bold;
+}
+div.col-lg-1.first {
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  border-left: 1px solid rgba(0,0,0,.125);
+  border-top: 1px solid rgba(0,0,0,.125);
+  border-bottom-left-radius: .25rem;
+  border-top-left-radius: .25rem;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+div.col-lg-2.middle {
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  border-top: 1px solid rgba(0,0,0,.125);
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+div.col-lg-2.middle.bolder {
+  font-weight: 600;
+}
+div.col-lg-2.last {
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  border-right: 1px solid rgba(0,0,0,.125);
+  border-top: 1px solid rgba(0,0,0,.125);
+  border-bottom-right-radius: .25rem;
+  border-top-right-radius: .25rem;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.row.cases {
+  height: 100%;
+  margin: 5px 0 5px 0;  
+  padding: 5px 5px 5px 5px;
+  border-radius: .25rem;
+  border: 1px solid rgba(0,0,0,.125);
+}
+.row.cases-detail {
+  padding: 5px 5px 5px 5px;
+}
+span.tab {
+  padding-right: 0.5em;
+}
+#name {
+  color: blue;
+}
