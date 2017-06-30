@@ -5,6 +5,7 @@ Created a mockup development using Angular 4
 * Download/Fork the File.
 * Run the app in local server.
   * Easiest to run it is using http-server node.js.
+  * Open Gitbash.
   * Install first http-server (npm install http-server -g).
   * http-server ./dist.
   * In URL vist localhost:8080.
