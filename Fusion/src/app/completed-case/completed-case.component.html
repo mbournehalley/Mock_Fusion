@@ -1,24 +1,24 @@
-<h5>
-  Completed Cases over the past 7 days
-</h5>
+<div class="row justify-content-between">
+  <div class="col-lg-4">
+    <h5>Completed Cases over the past 7 days</h5>
+  </div>
+  <div class="col-lg-2 text-right">
+    <i class="fa fa-window-minimize" aria-hidden="true"></i>
+  </div>
+</div>
 <hr>
 <div class="card-deck">
-  <div class="card" *ngFor="let service of services">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card-block">
-          <h4 class="card-title">
-            {{ service.type }}
-          </h4>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card-block">
-          <h4 class="card-title">
-            {{ service.days }}
-          </h4>
-        </div>
-      </div>
+  <div class="card case"
+       *ngFor="let service of services">
+    <div class="col-md-8 card-left">
+      <h4 class="card-title">
+        {{ service.type }}
+      </h4>
+    </div>
+    <div class="col-md-4 card-right text-center">
+      <h4 class="card-title">
+        {{ service.days }}
+      </h4>
     </div>
   </div>
 </div>

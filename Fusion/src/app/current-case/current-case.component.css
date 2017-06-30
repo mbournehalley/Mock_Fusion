@@ -1,5 +1,5 @@
 .col-lg-2.last.text-center > span {
-  color: white;
+  color: #ffffff;
   font-weight: bold;
 }
 div.col-lg-1.first {
@@ -44,4 +44,7 @@ span.tab {
 }
 #name {
   color: blue;
+}
+h5 {
+  margin: 0 0 0 10px;
 }

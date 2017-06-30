@@ -63,4 +63,15 @@ export class CurrentCaseComponent implements OnInit {
         return 'd-block bg-primary';
     }
   }
+
+  getDisplayStatus(status: string) {
+    switch (status) {
+      case 'ActionNeeded':
+        return 'fa fa-caret-up';
+      case 'Completed':
+        return 'fa fa-caret-right';
+      case 'InProgress':
+        return 'fa fa-circle';
+    }
+  }
 }

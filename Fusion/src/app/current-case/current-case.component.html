@@ -1,13 +1,27 @@
-<h5>
-  Current Cases
-</h5>
+<div class="row justify-content-between">
+  <div class="col-lg-2">
+    <h5>Current Cases</h5>
+  </div>
+  <div class="col-lg-2 text-right">
+    <i class="fa fa-window-minimize" aria-hidden="true"></i>
+  </div>
+</div>
+
 <hr>
 <div class="container-fluid cases">
-  <h6>Filter Options</h6>
+  <div class="row justify-content-between">
+    <div class="col-lg-2">
+      <h6>Filter Options</h6>
+    </div>
+    <div class="col-lg-2 text-right">
+      <i class="fa fa-plus" aria-hidden="true"></i>
+    </div>
+  </div>
+  
   <hr>
   <div class="row cases">
-    <div class="col-lg-1">    
-      <span><strong>Services:</strong></span>
+    <div class="col-lg-2">    
+      <span><strong>Services Types:</strong></span>
     </div>
     <div class="col-lg-2">    
       <div class="d-inline bg-success">
@@ -27,13 +41,13 @@
       </div>
       <span>&nbsp;CoPay</span>
     </div>
-    <div class="col-lg-1">
+    <div class="col-lg-2">
       <div class="d-inline bg-info">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       </div>
       <span>&nbsp;PAP</span>
     </div>
-    <div class="col-lg-3">
+    <div class="col-lg-2">
       <div class="d-inline bg-inverse">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       </div>
@@ -41,26 +55,26 @@
     </div>  
   </div>
   <div class="row justify-content-center">
-    <div class="col-lg-1 ">
+    <div class="col-lg-1 first">
       <strong>Status Key</strong>
     </div>
-    <div class="col-lg-2">
-      <i class="fa fa-circle" aria-hidden="true"></i>
+    <div class="col-lg-2 middle">
+      <i class="fa fa-caret-right" aria-hidden="true"></i>
       Completed
     </div>
-    <div class="col-lg-2">
+    <div class="col-lg-2 middle">
       <i class="fa fa-circle" aria-hidden="true"></i>
       In-Progress
     </div>
-    <div class="col-lg-2">
-      <i class="fa fa-circle" aria-hidden="true"></i>
+    <div class="col-lg-2 last">
+      <i class="fa fa-caret-up" aria-hidden="true"></i>
       Action-needed
     </div>
   </div>
   <div class="row cases-detail justify-content-center" 
        *ngFor="let patient of pagedItems">
     <div class="col-lg-1 first">
-      <i class="fa fa-circle" aria-hidden="true"></i>
+      <i [ngClass]="getDisplayStatus(patient.statusKey)" aria-hidden="true"></i>
     </div>
     <div id="name" class="col-lg-2 middle">
       {{ patient.name }}

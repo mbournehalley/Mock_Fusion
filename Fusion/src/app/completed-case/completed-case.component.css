@@ -1,0 +1,27 @@
+.card.case {
+  width: 20rem; 
+  height: 12em;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+}
+.card-deck {
+  padding: 10px 10px 10px 10px;
+}
+.col-md-8.card-left {
+  background-color: #9C468C;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.col-md-4.card-right{
+  background-color:	#A96DAB;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+h4 {
+  color:#ffffff;
+}
+h5 {
+  margin: 0 0 0 10px;
+}
