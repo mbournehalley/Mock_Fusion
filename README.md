@@ -1,5 +1,5 @@
 # Mock_Fusion
-Created a mockup development using Angular 4
+Created a mockup development using Angular 
 
 ## Running the App
 * Download/Fork the File.
