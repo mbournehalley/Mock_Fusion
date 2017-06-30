@@ -7,7 +7,7 @@ Created a mockup development using Angular 4
   * Easiest to run it is using http-server node.js.
   * Open Gitbash.
   * Install first http-server (npm install http-server -g).
-  * http-server ./dist.
+  * http-server ./dest.
   * In URL vist localhost:8080.
 
 ![mock_fusion](https://user-images.githubusercontent.com/8010888/27664295-9bae7f26-5c1b-11e7-8c6b-695e5e509bd9.png)
